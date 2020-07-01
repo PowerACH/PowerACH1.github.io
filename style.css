@@ -1,0 +1,17 @@
+#board {
+    background: black;
+    border: solid;
+    width: 800px;
+    height: 600px;
+    padding: 24px;
+    margin: auto; 
+}
+
+#card{
+    background: grey;
+    border: white 1px solid;
+    width: 155px;
+    height: 155px;
+    float: left;
+    
+}

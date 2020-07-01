@@ -24,8 +24,9 @@
 
 
 ### Wireframe
-![Recall Home] (./wireframes/recallHome.png)
-![Recall GameBoard] (./wireframes/recallGameboard.png)
+
+![Recall Home](./wireframes/recallHome.png)
+![Recall GameBoard](./wireframes/recallGameboard.png)
 
 ### Additional Features 
 
