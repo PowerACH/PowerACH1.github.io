@@ -4,9 +4,13 @@
     width: auto;
     height: 100vh;
     padding: 24px;
-    margin: auto;
-    opacity: 80%; 
+    margin: auto; 
     display: 
+}
+
+#frontImage {
+    width: 10vw;
+    height: 15vh;
 }
 
 #board {
@@ -19,7 +23,7 @@
 
 #card, #score1, #score2{
     background: grey;
-    opacity: 30%;
+    opacity: 50%;
     border: white 1px solid;
     width: 10vw;
     height: 15vh;
