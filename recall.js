@@ -1,5 +1,13 @@
 
 
+//card flip
+const memoryCard = window.document.querySelectorAll("#card");//selects card div
+
+function flipCard() {
+    this.classList.toggle('flip');//Toggles between a class name for an element. If its there, it will remove it. If the class does not exist, it will add it.
+} 
+
+memoryCard.forEach(card => card.addEventListener("click", flipCard))//assigns action to card div
 
 
 
