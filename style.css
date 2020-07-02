@@ -1,17 +1,46 @@
-#board {
-    background: black;
-    border: solid;
-    width: 800px;
-    height: 600px;
+
+#container {
+    background-image: url(./images/space.jpeg);
+    width: auto;
+    height: 100vh;
     padding: 24px;
-    margin: auto; 
+    margin: auto;
+    opacity: 80%; 
+    display: 
 }
 
-#card{
+#board {
+    display: grid;
+    grid-template-columns: .1fr .1fr .1fr .1fr;
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#card, #score1, #score2{
     background: grey;
+    opacity: 30%;
     border: white 1px solid;
-    width: 155px;
-    height: 155px;
-    float: left;
-    
+    width: 10vw;
+    height: 15vh;
+}
+
+#card:hover {
+    opacity: 100%;
+}
+
+#score1 {
+    justify-self: right;
+}
+
+#score2 {
+    justify-self: left;
+}
+
+
+#logo {
+    height: 20px;
+    width: 200px;
+    background: white;
+    justify-self: center;
 }
