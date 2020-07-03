@@ -3,9 +3,67 @@
 //card flip
 const memoryCard = window.document.querySelectorAll(".card");//selects card div
 
+let flippedCard = false;
+let firstChoice, secondChoice;
+let stopBoard = false;
+
 function flipCard() {
+    if (stopBoard) {
+        return
+    }
+    if (this === firstChoice) {
+        return
+    }
     this.classList.toggle('flip');//Toggles between a class name for an element. If its there, it will remove it. If the class does not exist, it will add it.
-} 
+
+    if (!flippedCard) {
+        //first click
+        flippedCard = true;
+        firstChoice = this;
+
+        return
+
+    } else {
+        flippedCard = false;
+        secondChoice = this;
+
+        matched()
+    }
+}
+
+function matched() {
+    //if cards match
+    if (firstChoice.dataset.name === secondChoice.dataset.name) { //disable cards
+        firstChoice.removeEventListener('click', flipCard)
+        firstChoice.removeEventListener('click', flipCard)
+
+        resetBoard()
+    } else {//unflip cards
+        stopBoard = true;
+        setTimeout(() => {
+            firstChoice.classList.remove('flip')
+            secondChoice.classList.remove('flip')
+            stopBoard = false;
+        }, 1000)
+    }
+}
+
+function resetBoard() {
+    flippedCard = false
+    stopBoard = false
+    firstChoice = null
+    secondChoice = null
+
+}
+
+(function shuffle() {
+    memoryCard.forEach(card => {
+        let random = Math.floor(Math.random() * 12)
+        card.style.order = random;
+    })
+})()
+
+
 
 memoryCard.forEach(card => card.addEventListener("click", flipCard))//assigns action to card div
 

@@ -22,13 +22,10 @@ body {
 
 }
 
-.card {/*memory-card*/
-    /* width: 140px; */
-    /* height: 140px; */
-    width: calc(25% - 10px);
-    height:(33.333% - 10px);
-    /* margin: 9px; */
-    margin: 5px;
+.card {
+    width: 145px;
+    height: 140px;
+    margin: 7px;
     transform-style: preserve-3d;/**/
     transition: transform .5s;/**/
     position: relative;
@@ -55,3 +52,6 @@ body {
     transform: rotateY(180deg);
 }
 
+#frontImage {
+    transform: rotateY(180deg);
+}
