@@ -11,7 +11,50 @@ body {
     display: flex;
 }
 
-#board {
+
+/* Start Menu Modal Styling */
+#startMenu {
+    margin: 70px;
+    padding: 20px;
+    background: grey;
+    border-radius: 55px;
+    width: 85%;
+    position: relative;
+    /* transition: all 5s ease-in-out; */
+}
+
+/* .popup { */
+    /* position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	/* transition: opacity 500ms; */
+	/* visibility: hidden; */
+	/* opacity: 0; */
+/* } */
+
+#recallStart{
+    position: relative;
+    top: 150px;
+}
+
+
+#playGame, #howToPlay {
+    width: 250px;
+    position: relative;
+    top: 15em;
+    left: 19em;
+
+}
+
+
+
+
+
+
+#board.play {
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;/**/
@@ -21,6 +64,12 @@ body {
     border: 2px solid white;
 
 }
+
+#board {
+    visibility: hidden;
+}
+
+
 
 .card {
     width: 145px;
