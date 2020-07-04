@@ -1,8 +1,18 @@
+let matchCards = 0;
+
+let player= {
+    constr
+}
+
+
 function startGame() {
     window.document.getElementById("overlay").classList.toggle('after')
     window.document.getElementById("board").classList.toggle('noModal')
-    window.document.getElementById("pOneScore").classList.toggle('')
-    window.document.getElementById("pTwoScore").classList.toggle('')
+    window.document.getElementById("pOneScore").classList.toggle('after')
+    window.document.getElementById("pTwoScore").classList.toggle('after')
+
+
+
 }
 
 
@@ -11,7 +21,7 @@ function startGame() {
 
 
 
-
+// ******************Match Board Functions*****************//
 //card flip
 const memoryCard = window.document.querySelectorAll(".card");//selects card div
 
@@ -47,10 +57,10 @@ function matched() {
     if (firstChoice.dataset.name === secondChoice.dataset.name) { //disable cards
         firstChoice.removeEventListener('click', flipCard)
         firstChoice.removeEventListener('click', flipCard)
-
+        matchCards += 1
         resetBoard()
 
-    //when cards dont match, unflip cards
+    //unflip cards when not a match
     } else {
         stopBoard = true;
         setTimeout(() => {
@@ -61,6 +71,7 @@ function matched() {
     }
 }
 
+
 function resetBoard() {
     flippedCard = false
     stopBoard = false
@@ -69,6 +80,7 @@ function resetBoard() {
 
 }
 
+//shuffles cards after each reload
 (function shuffle() {
     memoryCard.forEach(card => {
         let random = Math.floor(Math.random() * 16)
@@ -77,6 +89,6 @@ function resetBoard() {
 })()
 
 
-
-memoryCard.forEach(card => card.addEventListener("click", flipCard))//assigns action to card div
+//allows cards to be clickable
+memoryCard.forEach(card => card.addEventListener("click", flipCard))
 

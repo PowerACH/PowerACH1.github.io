@@ -70,7 +70,6 @@ body {
 }
 
 #playBtn {
-    /* top: ; */
     left: 39%;
 
 }
@@ -147,4 +146,14 @@ body {
     text-align: center;
     margin-top: 450px;
 }
+
+.scorebox {
+    visibility: hidden;
+}
+
+.scorebox.after{
+    visibility: visible;
+
+}
+
 
