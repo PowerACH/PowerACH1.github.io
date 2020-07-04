@@ -1,4 +1,9 @@
-
+function startGame() {
+    window.document.getElementById("overlay").classList.toggle('after')
+    window.document.getElementById("board").classList.toggle('noModal')
+    window.document.getElementById("pOneScore").classList.toggle('')
+    window.document.getElementById("pTwoScore").classList.toggle('')
+}
 
 
 

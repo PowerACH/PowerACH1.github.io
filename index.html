@@ -13,32 +13,34 @@
 <body>
 
     <!-- Start Modal -->
-<div id='overlay'>
-    <div id='startMenu' class="popup">
-        <div class='menuHead'>
-            <!-- Logo header -->
-            <img id='recallStart' src="./images/recallfont.png">
-        </div>
-        <div id="playBtn">
-            <input type="image" id='playGame' src="./images/startgame.png"/>
-        </div>
-        <div id="howBtn">
-            <input type="image" id='howToPlay' src="./images/howtoplay.png"/>
+    <div class='overlay' id='overlay'>
+        <div id='startMenu' class="popup">
+            <div class='menuHead'>
+                <!-- Logo header -->
+                <img id='recallStart' src="./images/recallfont.png">
+            </div>
+            <div id="playBtn">
+                <input type="image" id='playGame' src="./images/howtoplay.png" />
+            </div>
+            <div id="howBtn">
+                <input onclick="startGame()" type="image" id='howToPlay' src="./images/startgame.png" />
+            </div>
+            <div>
 
-            <!-- <button id="playGame" onclick="startGame()">Start Game</button>
-             <button id="howButton" onclick="">How to Play</button> --> 
-
+            </div>
         </div>
     </div>
-</div>
 
+<div id="pOneScore">
+        <h2>Player One Score:</h2>
+    </div>
 
-
+    
 
 
     <!-- Add div for memory game board -->
-
-    <div id="board">
+   
+    <div id="board" class="boardClass">
 
         <div class='card' data-name='one'>
             <div id='cardInner'>
@@ -186,7 +188,9 @@
         </div>
     </div>
 
-
+<div id="pTwoScore">
+    <h2>Player Two Score:</h2>
+</div>
 
 
 

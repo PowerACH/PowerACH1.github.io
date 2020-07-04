@@ -7,7 +7,7 @@
 
 body {
     position: relative;
-    background: black;
+    background: grey;
     height: 100vh;
     display: flex;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 /* toggle startmenu modal to hide after clicking start game */
-#startMenu.after {
+.after, #after {
     visibility: hidden;
 }
 
@@ -89,7 +89,7 @@ body {
 
 
 /* toggle board when clicking start game */
-#board.after {
+.boardClass.noModal {
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;/**/
@@ -97,10 +97,11 @@ body {
     height: 640px;
     margin: auto;
     border: 2px solid white;
+    visibility: visible;
 
 }
 /* board while modal is active  */
-#board {
+.boardClass {
     visibility: hidden;
 }
 
@@ -139,3 +140,11 @@ body {
 #frontImage {
     transform: rotateY(180deg);
 }
+
+#pOneScore, #pTwoScore {
+    border: 20px solid black;
+    height: 200px;
+    text-align: center;
+    margin-top: 450px;
+}
+
