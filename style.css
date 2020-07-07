@@ -7,27 +7,19 @@
 
 body {
     position: relative;
-    background: grey;
-    height: 100vh;
-    display: flex;
+    background-image: url('./images/city.png');
+    background-repeat: no-repeat;
+    background-size: 100% 300%;
 }
 
-
-/* Start Menu Modal Styling */
+/* Start Menu Modal Styling
 #startMenu {
-    /* margin: px;
-    padding: 20px;
-    background: grey;
-    border-radius: 55px;
-    width: 85%;
-    position: relative; */
-    /* transition:  ; */
-    width: 900px;
-    height: 500px;
+    width: 500px;
+    height: 200px;
     line-height: 200px;
     position: fixed;
-    top: 40%;
-    left: 50%;
+    top: 60%;
+    left: 60%;
     margin-top: -200px;
     margin-left: -400px;
     background-color: #8ebf42;
@@ -35,6 +27,7 @@ body {
     text-align: center;
     z-index: 11;
 }
+
  
 #overlay {
     position: absolute;
@@ -43,73 +36,69 @@ body {
   height: 500px;
   width: 85%;
   z-index: 10;
-}
-
-/* .popup { */
-    /* position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.7);
-	/* transition: opacity 500ms; */
-	/* visibility: hidden; */
-	/* opacity: 0; */
-/* } */
+} */
 
 
-/* Modal Logo */
-#recallStart{
-    top: 150px;
-    left: 40px;
-}
-
-/* Modal/ Start menu buttons */
-#playGame, #howToPlay {
-    width: 350px;
-}
-
-#playBtn {
-    left: 39%;
-
-}
-
-#howBtn {
-    position: relative;
-    bottom: 270px;
-}
-
-/* toggle startmenu modal to hide after clicking start game */
-.after, #after {
-    visibility: hidden;
-}
-
-
-
-
-/* toggle board when clicking start game */
-.boardClass.noModal {
-    display: flex;
-    flex-wrap: wrap;
+.boardClass {
+    display: table;
     perspective: 1000px;/**/
-    width: 640px;
-    height: 640px;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-color: grey;
+    height: relative;
     margin: auto;
-    border: 2px solid white;
+    max-width: inherit;
     visibility: visible;
 
 }
-/* board while modal is active  */
-.boardClass {
-    visibility: hidden;
+
+
+#header {
+    position: relative;
+    padding-bottom: 20px;
+    width: 575px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#memoryWrap {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#memoryWrap.blur {
+    filter: blur(3px);
+    pointer-events: none;
+    user-select: none;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 
 
+table {
+    border-spacing: 1px;
+}
+tr {
+    display: table-row;
+   border-color: inherit;
+   vertical-align: inherit;
+}
+
+div {
+    display: block;
+}
 
 .card {
     width: 145px;
     height: 140px;
-    margin: 7px;
+    /* margin: 7px; */
     transform-style: preserve-3d;/**/
     transition: transform .5s;/**/
     position: relative;
@@ -122,6 +111,10 @@ body {
     transition: transform .2s;
 }
 
+table {
+    width: 100%;
+    height: 100%;
+}
 
 #frontImage, #backImage {
     position: absolute;
@@ -133,28 +126,93 @@ body {
 }
 
 .card.flip {/* reverses card */
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 #frontImage {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
-#pOneScore, #pTwoScore {
-    border: 20px solid black;
-    height: 200px;
+
+.scorebox{
+    visibility: visible;
+    width: 52%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    
+    clear: both;
+    min-height: 64px;
+    margin: 8px auto;
+    padding: 10px;
     text-align: center;
-    margin-top: 450px;
+    position: relative;
+    background-color: grey;
 }
 
-.scorebox {
+.scoreboxItem {
+    display: inline-block;
+    width: 130px;
+    text-align: center;
+    margin: 2px;
+    vertical-align: top;
+}
+
+.scoreboxInput {
+    height: 34px;
+    font-size: 2rem;
+
+
+}
+
+.modalContainer {
     visibility: hidden;
 }
 
-.scorebox.after{
+.modalContainer.after {
+    position: relative;
+    width: 50%;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    transition: 0.5s;
+    padding: 20px;
+    margin: auto;
     visibility: visible;
 
 }
 
+.modalContent {
+    position: relative;
+    max-width: 800px;
+}
 
+.modalHeader {
+    position: relative;
+    display: block;
+}
 
+.modalHeader > h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#modalMessage > p {
+    font-size: 20px;
+    text-align: center
+}
+
+#startGame {
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;    
+    background: #111;
+    
+}
+#restart {
+   text-align: center; 
+}

@@ -12,185 +12,266 @@
 
 <body>
 
-    <!-- Start Modal -->
-    <div class='overlay' id='overlay'>
-        <div id='startMenu' class="popup">
-            <div class='menuHead'>
-                <!-- Logo header -->
-                <img id='recallStart' src="./images/recallfont.png">
-            </div>
-            <div id="playBtn">
-                <input type="image" id='playGame' src="./images/howtoplay.png" />
-            </div>
-            <div id="howBtn">
-                <input onclick="startGame()" type="image" id='howToPlay' src="./images/startgame.png" />
-            </div>
-            <div>
 
+
+    <!--memory game board -->
+    <div id="memoryWrap">
+
+        <div id="board" class="boardClass">
+            <table>
+                <thead><img id="header" src="images/recallfont.png"></thead>
+                <tbody>
+                    <tr>
+                        <td class="cardContainer">
+                            <div class='card' data-name='one'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink1.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='two'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink2.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='three'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink3.jpg" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='four'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink4.jpg" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='five'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink5.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='six'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink6.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='seven'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink7.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='eight'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink8.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="cardContainer">
+                            <div class='card' data-name='one'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink1.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='two'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink2.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='three'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink3.jpg" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='four'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink4.jpg" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="cardContainer">
+                            <div class='card' data-name='five'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink5.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='six'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink6.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardback'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='seven'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink7.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardback'>
+                                    <img id='backImage' src="./images/silver.png">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="cardContainer">
+                            <div class='card' data-name='eight'>
+                                <div id='cardInner'>
+                                    <div id='cardFront'>
+                                        <img id='frontImage' src="./images/ink8.webp" alt="Logo R"> </div>
+                                </div>
+                                <div id='cardBack'>
+                                    <img id='backImage' src="./images/silver.png">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <div class="scorebox" id="scorebox1">
+            <!-- <div class="scoreboxItem">
+                <label class="scoreboxInput" id="moves">0</label>
+                <br>
+                <label for="moves">Moves</label>
+        </div> -->
+            <div class="scoreboxItem">
+                <label class="scoreboxInput" id="pOne">0</label>
+                <br>
+                <label for="pOne">Player 1</label>
+            </div>
+
+            <div class="scoreboxItem">
+                <label class="scoreboxInput" id="minutes">00</label>:<label class="scoreboxInput"
+                    id="seconds">00</label>
+                <br>
+                <label for="scoreboxInput">Time Elapsed</label>
+
+            </div>
+            <div class="scoreboxItem">
+                <label class="scoreboxInput" id="pTwo">0</label>
+                <br>
+                <label for="pTwo">Player 2</label>
             </div>
         </div>
-    </div>
+</div>
+        <!-- Modal -->
+        <div class='modalContainer' id="modalContainer">
+            <div class="modalContent">
+                <div class='modalHeader'>
+                    <h2> Winner!</h2>
+                </div>
+                <div id="modalMessage">
+                    <p id="winnerMessage"> </p>
+                    <p>Play Again?
+                </div class="modalFooter">
+                <div id="restart">
+                    <a href="." id='startGame'>Play Again</a>
+                </div>
+                <div>
 
-<div class=scorebox id="pOneScore">
-        <h2>Player One Score:</h2>
-    </div>
-
+                </div>
+            </div>
+        </div>
     
 
 
-    <!-- Add div for memory game board -->
-   
-    <div id="board" class="boardClass">
-
-        <div class='card' data-name='one'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img1.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='two'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img2.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='three'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img3.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='four'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img4.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='five'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img5.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='six'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img6.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='seven'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img7.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='eight'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img8.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='one'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img1.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='two'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img2.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='three'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img3.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='four'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img4.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='five'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img5.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='six'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img6.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardback'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='seven'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img7.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardback'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-        <div class='card' data-name='eight'>
-            <div id='cardInner'>
-                <div id='cardFront'>
-                    <img id='frontImage' src="./images/img8.png" alt="Logo R"> </div>
-            </div>
-            <div id='cardBack'>
-                <img id='backImage' src="./images/space.gif">
-            </div>
-        </div>
-    </div>
-
-<div class="scorebox" id="pTwoScore">
-    <h2>Player Two Score:</h2>
-</div>
 
 
 
